@@ -23,7 +23,7 @@ public class ServiceDAO {
 		ArrayList<RequestKpi> kpiData = new ArrayList<RequestKpi>();
 		try {
 			PreparedStatement ps = connection
-					.prepareStatement("select * from requestKpi2");
+					.prepareStatement("select * from requestKpi");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				RequestKpi kpi = new RequestKpi();
