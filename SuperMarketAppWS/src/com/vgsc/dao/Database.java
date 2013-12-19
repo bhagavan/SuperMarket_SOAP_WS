@@ -32,6 +32,7 @@ public class Database {
 			Class.forName("com.mysql.jdbc.Driver");
 			 connection = DriverManager.getConnection(host + port
 					+ "/" + dbName, userName, password);
+			 System.out.println(host +","+ userName +","+ port);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
