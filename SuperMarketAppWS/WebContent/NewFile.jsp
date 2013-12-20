@@ -1,12 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Super market Application for Web Service</title>
+<!DOCTYPE html>  
+<html><head>  
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />  
+    <title>Hello World</title>  
+  
+    <script id='sap-ui-bootstrap' 
+        src='file:///E:/SAP/UI5/openui5-runtime-1.16.8-SNAPSHOT/resources/sap-ui-core.js'  
+        data-sap-ui-theme='sap_goldreflection'  
+        data-sap-ui-libs='sap.ui.commons'></script>   
+  
+<script>  
+    var btn = new sap.ui.commons.Button({  
+        text:'Hello World',  
+        press:function(){alert('Hello!')}  
+    });  
+    btn.placeAt('content');  
+</script>
+
 </head>
-<body>
-Super market Application for Web Service
+<body class='sapUiBody'>
+    <div id='content'>
+    This is Sample SAP UI5 web Application
+    <form action="Button()" onsubmit="return Button()">
+    <input type="button" >
+    </form>
+    </div>
 </body>
 </html>

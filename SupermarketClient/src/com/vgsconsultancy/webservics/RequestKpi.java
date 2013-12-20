@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="fromNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="MOS" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="MOU" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="networkCategory" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="Network" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="networkDevice" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="originatingNetwork" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="SDF" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="SER" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="terminatingNetwork" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="time" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="ProductTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="toNumber" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -45,7 +45,7 @@ import javax.xml.bind.annotation.XmlType;
     "fromNumber",
     "mos",
     "mou",
-    "networkCategory",
+    "network",
     "networkDevice",
     "originatingNetwork",
     "sdf",
@@ -53,7 +53,7 @@ import javax.xml.bind.annotation.XmlType;
     "ser",
     "status",
     "terminatingNetwork",
-    "time",
+    "productTime",
     "toNumber"
 })
 public class RequestKpi {
@@ -65,7 +65,8 @@ public class RequestKpi {
     protected String mos;
     @XmlElement(name = "MOU")
     protected String mou;
-    protected String networkCategory;
+    @XmlElement(name = "Network")
+    protected String network;
     protected String networkDevice;
     protected String originatingNetwork;
     @XmlElement(name = "SDF")
@@ -76,7 +77,8 @@ public class RequestKpi {
     protected String ser;
     protected String status;
     protected String terminatingNetwork;
-    protected String time;
+    @XmlElement(name = "ProductTime")
+    protected String productTime;
     protected String toNumber;
 
     /**
@@ -176,27 +178,27 @@ public class RequestKpi {
     }
 
     /**
-     * Gets the value of the networkCategory property.
+     * Gets the value of the network property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getNetworkCategory() {
-        return networkCategory;
+    public String getNetwork() {
+        return network;
     }
 
     /**
-     * Sets the value of the networkCategory property.
+     * Sets the value of the network property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setNetworkCategory(String value) {
-        this.networkCategory = value;
+    public void setNetwork(String value) {
+        this.network = value;
     }
 
     /**
@@ -368,27 +370,27 @@ public class RequestKpi {
     }
 
     /**
-     * Gets the value of the time property.
+     * Gets the value of the productTime property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getTime() {
-        return time;
+    public String getProductTime() {
+        return productTime;
     }
 
     /**
-     * Sets the value of the time property.
+     * Sets the value of the productTime property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setTime(String value) {
-        this.time = value;
+    public void setProductTime(String value) {
+        this.productTime = value;
     }
 
     /**

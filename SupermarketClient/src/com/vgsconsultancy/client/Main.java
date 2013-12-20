@@ -18,7 +18,7 @@ public class Main {
 					System.out.print(r.getFromNumber()+" ");
 					System.out.print(r.getMOS()+" ");
 					System.out.print(r.getMOU()+" ");
-					System.out.print(r.getNetworkCategory()+" ");
+					System.out.print(r.getNetwork()+" ");
 					System.out.print(r.getNetworkDevice()+" ");
 					System.out.print(r.getOriginatingNetwork()+" ");
 					System.out.print(r.getSDF()+" ");
@@ -26,7 +26,7 @@ public class Main {
 					System.out.print(r.getSER()+" ");
 					System.out.print(r.getStatus()+" ");
 					System.out.print(r.getTerminatingNetwork()+" ");
-					System.out.print(r.getTime()+" ");
+					System.out.print(r.getProductTime()+" ");
 					System.out.println(r.getToNumber()+" ");
 
 

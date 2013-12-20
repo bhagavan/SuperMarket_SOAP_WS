@@ -1,7 +1,13 @@
 package com.vgsc.model;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 /**
  *This class is a Plain Old Java Object(POJO) having getters and setters.
  */
+@XmlRootElement(name="ProductName")
 public class RequestKpi {
 	private String Time;
 	private String NetworkCategory;
@@ -17,12 +23,15 @@ public class RequestKpi {
 	private String CNAR;
 	private String MOS;
 	private String MOU;
+	
+	@XmlElement(name="ProductTime")
 	public String getTime() {
 		return Time;
 	}
 	public void setTime(String time) {
-		Time = time;
+		Time = time;	
 	}
+	@XmlElement(name="Network")
 	public String getNetworkCategory() {
 		return NetworkCategory;
 	}

@@ -28,6 +28,7 @@ public class ObjectFactory {
     private final static QName _GetProductsv2_QNAME = new QName("http://vgsconsultancy.com/webservics", "getProductsv2");
     private final static QName _AddProduct_QNAME = new QName("http://vgsconsultancy.com/webservics", "addProduct");
     private final static QName _Getitems_QNAME = new QName("http://vgsconsultancy.com/webservics", "getitems");
+    private final static QName _ProductName_QNAME = new QName("http://vgsconsultancy.com/webservics", "ProductName");
     private final static QName _GetProductsv2Response_QNAME = new QName("http://vgsconsultancy.com/webservics", "getProductsv2Response");
     private final static QName _GetproductsList_QNAME = new QName("http://vgsconsultancy.com/webservics", "getproductsList");
     private final static QName _GetReqkpi_QNAME = new QName("http://vgsconsultancy.com/webservics", "getReqkpi");
@@ -91,6 +92,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link RequestKpi }
+     * 
+     */
+    public RequestKpi createRequestKpi() {
+        return new RequestKpi();
+    }
+
+    /**
      * Create an instance of {@link Getitems }
      * 
      */
@@ -120,14 +129,6 @@ public class ObjectFactory {
      */
     public AddProductResponse createAddProductResponse() {
         return new AddProductResponse();
-    }
-
-    /**
-     * Create an instance of {@link RequestKpi }
-     * 
-     */
-    public RequestKpi createRequestKpi() {
-        return new RequestKpi();
     }
 
     /**
@@ -172,6 +173,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://vgsconsultancy.com/webservics", name = "getitems")
     public JAXBElement<Getitems> createGetitems(Getitems value) {
         return new JAXBElement<Getitems>(_Getitems_QNAME, Getitems.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RequestKpi }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://vgsconsultancy.com/webservics", name = "ProductName")
+    public JAXBElement<RequestKpi> createProductName(RequestKpi value) {
+        return new JAXBElement<RequestKpi>(_ProductName_QNAME, RequestKpi.class, null, value);
     }
 
     /**

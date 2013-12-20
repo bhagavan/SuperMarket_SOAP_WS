@@ -27,21 +27,6 @@ public interface SupetmarketCatalog {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<java.lang.String>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getproductsList", targetNamespace = "http://vgsconsultancy.com/webservics", className = "com.vgsconsultancy.webservics.GetproductsList")
-    @ResponseWrapper(localName = "getproductsListResponse", targetNamespace = "http://vgsconsultancy.com/webservics", className = "com.vgsconsultancy.webservics.GetproductsListResponse")
-    @Action(input = "http://vgsconsultancy.com/webservics/SupetmarketCatalog/getproductsListRequest", output = "http://vgsconsultancy.com/webservics/SupetmarketCatalog/getproductsListResponse")
-    public List<String> getproductsList(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
      * @return
      *     returns java.util.List<java.lang.String>
      */
@@ -93,5 +78,20 @@ public interface SupetmarketCatalog {
     @ResponseWrapper(localName = "getReqkpiResponse", targetNamespace = "http://vgsconsultancy.com/webservics", className = "com.vgsconsultancy.webservics.GetReqkpiResponse")
     @Action(input = "http://vgsconsultancy.com/webservics/SupetmarketCatalog/getReqkpiRequest", output = "http://vgsconsultancy.com/webservics/SupetmarketCatalog/getReqkpiResponse")
     public List<RequestKpi> getReqkpi();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<java.lang.String>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getproductsList", targetNamespace = "http://vgsconsultancy.com/webservics", className = "com.vgsconsultancy.webservics.GetproductsList")
+    @ResponseWrapper(localName = "getproductsListResponse", targetNamespace = "http://vgsconsultancy.com/webservics", className = "com.vgsconsultancy.webservics.GetproductsListResponse")
+    @Action(input = "http://vgsconsultancy.com/webservics/SupetmarketCatalog/getproductsListRequest", output = "http://vgsconsultancy.com/webservics/SupetmarketCatalog/getproductsListResponse")
+    public List<String> getproductsList(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
 }

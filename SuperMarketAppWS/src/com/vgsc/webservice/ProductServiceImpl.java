@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.jws.WebMethod;
+import javax.jws.WebResult;
+
 import com.vgsc.dao.Database;
 import com.vgsc.dao.ServiceDAO;
 import com.vgsc.model.Products;
@@ -78,15 +81,14 @@ public class ProductServiceImpl {
 
 		return productList;
 	}
-
+	@WebMethod
+	@WebResult(name="RequestKpi")
 	public List<RequestKpi> getReqkpi() throws Exception {
 		List<RequestKpi> kpiList = new ArrayList<>();
 		Database db = new Database();
 		Connection conn = db.get_Connection();
 		ServiceDAO serviceDAO = new ServiceDAO();
-
 		kpiList = serviceDAO.getReqKPI(conn);
-
 		return kpiList;
 	}
 
